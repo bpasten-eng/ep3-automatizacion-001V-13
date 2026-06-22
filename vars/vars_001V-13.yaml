@@ -1,0 +1,21 @@
+alumno:
+  codigo: "001V-13"
+  nombre: "Pasten Poblete Bastian Jose"
+
+cliente:
+  empresa: "Almacenes Generales SA"
+  hostname: "RTR-ALMAGEN"
+
+router:
+  ip: "192.168.56.101"
+  usuario: "cisco"
+  password: "cisco123!"
+  loopback_id: 10
+  loopback_ip: "10.1.13.1"
+  loopback_mask: "255.255.255.0"
+  loopback_prefix: "24"
+  descripcion_wan: "Enlace-WAN-Copiapo"
+  banner: "ACCESO RESTRINGIDO - ALMAGEN"
+  ntp_server: "1.1.1.1"
+
+  
