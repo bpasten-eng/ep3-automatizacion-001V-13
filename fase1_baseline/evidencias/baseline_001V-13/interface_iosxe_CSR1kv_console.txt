@@ -16,19 +16,19 @@ GigabitEthernet1 is up, line protocol is up
   ARP type: ARPA, ARP Timeout 04:00:00
   Last input 00:00:00, output 00:00:00, output hang never
   Last clearing of "show interface" counters never
-  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Input queue: 1/375/0/0 (size/max/drops/flushes); Total output drops: 0
   Queueing strategy: fifo
   Output queue: 0/40 (size/max)
   5 minute input rate 1000 bits/sec, 1 packets/sec
   5 minute output rate 1000 bits/sec, 1 packets/sec
-     3136 packets input, 544621 bytes, 0 no buffer
+     3667 packets input, 619447 bytes, 0 no buffer
      Received 0 broadcasts (0 IP multicasts)
      0 runts, 0 giants, 0 throttles 
      0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
      0 watchdog, 0 multicast, 0 pause input
-     510 packets output, 81520 bytes, 0 underruns
+     822 packets output, 134989 bytes, 0 underruns
      0 output errors, 0 collisions, 1 interface resets
-     8 unknown protocol drops
+     9 unknown protocol drops
      0 babbles, 0 late collision, 0 deferred
      1 lost carrier, 0 no carrier, 0 pause output
      0 output buffer failures, 0 output buffers swapped out
@@ -37,10 +37,10 @@ CSR1kv#
 show interfaces accounting
 GigabitEthernet1 VBox
                 Protocol    Pkts In   Chars In   Pkts Out  Chars Out
-                   Other         48       2320         34       2040
-                      IP       3060     540646        448      70056
-                     ARP         32       1344         34       2040
-                    IPv6         21       2917          0          0
+                   Other         53       2568         37       2220
+                      IP       3570     611373        751     117741
+                     ARP         35       1470         37       2220
+                    IPv6         28       3545          0          0
 CSR1kv#
 +++ CSR1kv: executing command 'show ip interface' +++
 show ip interface

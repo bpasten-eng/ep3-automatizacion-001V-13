@@ -20,8 +20,8 @@ software.
 
 ROM: IOS-XE ROMMON
 
-CSR1kv uptime is 2 hours, 8 minutes
-Uptime for this control processor is 2 hours, 14 minutes
+CSR1kv uptime is 2 hours, 24 minutes
+Uptime for this control processor is 2 hours, 31 minutes
 System returned to ROM by reload
 System image file is "bootflash:packages.conf"
 Last reload reason: Unknown reason
@@ -74,7 +74,7 @@ Directory of bootflash:/
 406401  drwx             4096  Jun 25 2026 05:36:55 +00:00  .prst_sync
 260097  drwx             4096  Jun 25 2026 05:37:11 +00:00  .rollback_timer
 463297  drwx             4096  Jun 25 2026 05:42:31 +00:00  .dbpersist
-414529  drwx             8192  Jun 25 2026 07:49:20 +00:00  tracelogs
+414529  drwx             8192  Jun 25 2026 08:02:45 +00:00  tracelogs
 162561  drwx             4096  Jun 25 2026 05:38:42 +00:00  virtual-instance
    15  -rw-               30  Jun 25 2026 05:42:05 +00:00  throughput_monitor_params
    16  -rw-              847  Jun 25 2026 05:42:13 +00:00  cvac.log
@@ -85,13 +85,13 @@ Directory of bootflash:/
    20  -rw-               35  Jun 25 2026 05:46:58 +00:00  pnp-tech-time
    21  -rw-            59097  Jun 25 2026 05:47:02 +00:00  pnp-tech-discovery-summary
 
-7897796608 bytes total (7044661248 bytes free)
+7897796608 bytes total (7044644864 bytes free)
 CSR1kv#
 +++ CSR1kv: executing command 'show redundancy' +++
 show redundancy
 Redundant System Information :
 ------------------------------
-       Available system uptime = 2 hours, 8 minutes
+       Available system uptime = 2 hours, 24 minutes
 Switchovers system experienced = 0
               Standby failures = 0
         Last switchover reason = none
@@ -106,7 +106,7 @@ Current Processor Information :
 -------------------------------
                Active Location = slot 6
         Current Software state = ACTIVE
-       Uptime in current state = 2 hours, 8 minutes
+       Uptime in current state = 2 hours, 24 minutes
                  Image Version = Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
 Technical Support: http://www.cisco.com/techsupport
 Copyright (c) 1986-2020 by Cisco Systems, Inc.
@@ -143,8 +143,8 @@ Chassis type: CSR1000V
 
 Slot      Type                State                 Insert time (ago) 
 --------- ------------------- --------------------- ----------------- 
-R0        CSR1000V            ok, active            02:12:58      
-F0        CSR1000V            ok, active            02:12:58      
+R0        CSR1000V            ok, active            02:29:00      
+F0        CSR1000V            ok, active            02:29:00      
 
 CSR1kv#
 +++ CSR1kv: executing command 'show issu state detail' +++

@@ -32,7 +32,7 @@
   "os": "iosxe",
   "redundancy_communication": false,
   "redundancy_mode": "Non-redundant",
-  "rp_uptime": 7680,
+  "rp_uptime": 8640,
   "rtr_type": "CSR1000V",
   "slot": {
     "oc": {
@@ -50,7 +50,7 @@
         },
         "name": "CSR1000V",
         "redundancy_state": "ACTIVE",
-        "rp_uptime": "2 hours, 8 minutes",
+        "rp_uptime": "2 hours, 24 minutes",
         "sn": "JAB1303001C",
         "state": "ok, active",
         "system_image": "Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)"

@@ -70,3 +70,31 @@ Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
 
 
 
+
+Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
+  0%|          | 0/3 [00:00<?, ?it/s] 33%|███▎      | 1/3 [00:03<00:06,  3.16s/it] 67%|██████▋   | 2/3 [00:27<00:09,  9.57s/it]100%|██████████| 3/3 [00:29<00:00,  7.11s/it]100%|██████████| 3/3 [00:29<00:00,  9.69s/it]+==============================================================================+
+| Genie Learn Summary for device CSR1kv                                        |
++==============================================================================+
+|  Connected to CSR1kv                                                         |
+|  -   Log: evidencias/baseline_001V-13/connection_CSR1kv.txt                  |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'interface'                                                  |
+|  -  Ops structure:                                                           |
+| evidencias/baseline_001V-13/interface_iosxe_CSR1kv_ops.txt                   |
+|  -  Device Console:                                                          |
+| evidencias/baseline_001V-13/interface_iosxe_CSR1kv_console.txt               |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'platform'                                                   |
+|  -  Ops structure:  evidencias/baseline_001V-13/platform_iosxe_CSR1kv_ops.txt |
+|  -  Device Console:                                                          |
+| evidencias/baseline_001V-13/platform_iosxe_CSR1kv_console.txt                |
+|------------------------------------------------------------------------------|
+|  Learnt feature 'routing'                                                    |
+|  -  Ops structure:  evidencias/baseline_001V-13/routing_iosxe_CSR1kv_ops.txt |
+|  -  Device Console:                                                          |
+| evidencias/baseline_001V-13/routing_iosxe_CSR1kv_console.txt                 |
+|==============================================================================|
+
+
+
+
