@@ -1,0 +1,35 @@
+============================================================
+Script  : validacion_restconf.py
+Alumno  : 001V-13 - Pasten Poblete Bastian Jose
+Fecha   : 2026-06-26 05:33:23
+VM Host : labvm
+============================================================
+Consultando: https://192.168.56.101/restconf/data/Cisco-IOS-XE-native:native/hostname
+Consultando: https://192.168.56.101/restconf/data/ietf-interfaces:interfaces/interface=Loopback10
+Consultando: https://192.168.56.101/restconf/data/ietf-interfaces:interfaces/interface=GigabitEthernet1
+Consultando: https://192.168.56.101/restconf/data/Cisco-IOS-XE-native:native/ntp
+
+============================================================
+REPORTE DE VALIDACION RESTCONF
+============================================================
+  [OK]   Hostname corporativo
+         Esperado : RTR-ALMAGEN
+         Actual   : RTR-ALMAGEN
+
+  [OK]   IP Loopback10
+         Esperado : 10.1.13.1
+         Actual   : 10.1.13.1
+
+  [OK]   Descripcion WAN
+         Esperado : Enlace-WAN-Copiapo
+         Actual   : Enlace-WAN-Copiapo
+
+  [OK]   Servidor NTP
+         Esperado : 1.1.1.1
+         Actual   : 1.1.1.1
+
+------------------------------------------------------------
+Resultado: 4/4 criterios conformes
+
+>>> ESTADO RESTCONF: CONFORME <<<
+============================================================
