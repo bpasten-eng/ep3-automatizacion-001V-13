@@ -1,0 +1,18 @@
+testbed:
+  name: EP3-Testbed-001V-13
+devices:
+  CSR1kv:
+    os: iosxe
+    type: router
+    alias: RTR-ALMAGEN
+    credentials:
+      default:
+        username: cisco
+        password: cisco123!
+    connections:
+      cli:
+        protocol: ssh
+        ip: 192.168.56.101
+        port: 22
+        arguments:
+          ssh_options: "-o KexAlgorithms=diffie-hellman-group14-sha1"

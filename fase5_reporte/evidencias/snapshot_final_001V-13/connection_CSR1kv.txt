@@ -1,0 +1,62 @@
+[2026-06-26 05:37:32,333] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 05:37:32,333] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 05:37:32,654] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22 -o KexAlgorithms=diffie-hellman-group14-sha1, id: 140410620092320 +++
+[2026-06-26 05:37:32,654] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+RTR-ALMAGEN#[2026-06-26 05:40:58,768] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 05:40:58,768] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 05:40:59,155] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140112037064512 +++
+[2026-06-26 05:40:59,155] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#[2026-06-26 05:43:52,458] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 05:43:52,459] +++ Unicon plugin iosxe +++
+
+[2026-06-26 05:43:52,723] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140163691298720 +++
+[2026-06-26 05:43:52,723] connection to CSR1kv
+Password: 
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+RTR-ALMAGEN#[2026-06-26 05:47:30,795] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 05:47:30,796] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 05:47:31,164] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140405535326112 +++
+[2026-06-26 05:47:31,165] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#[2026-06-26 05:54:42,770] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 05:54:42,770] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 05:54:43,065] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139627576700736 +++
+[2026-06-26 05:54:43,066] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#[2026-06-26 06:12:36,172] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 06:12:36,172] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 06:12:36,559] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139909083168672 +++
+[2026-06-26 06:12:36,559] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#[2026-06-26 06:24:28,936] +++ CSR1kv logfile evidencias/snapshot_final_001V-13/connection_CSR1kv.txt +++
+[2026-06-26 06:24:28,936] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 06:24:29,127] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140192976543648 +++
+[2026-06-26 06:24:29,127] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#

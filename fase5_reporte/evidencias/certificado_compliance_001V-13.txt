@@ -1,0 +1,30 @@
+
+╔══════════════════════════════════════════════════════════════╗
+║        CERTIFICADO DE COMPLIANCE DE RED — EP3               ║
+║        DRY7122 Programacion y Redes Virtualizadas            ║
+╚══════════════════════════════════════════════════════════════╝
+
+ALUMNO        : Pasten Poblete Bastian Jose
+CODIGO        : 001V-13
+FECHA         : 2026-06-26 06:43:48
+VM            : labvm
+
+CLIENTE       : Almacenes Generales SA
+HOSTNAME      : RTR-ALMAGEN
+IP ROUTER     : 192.168.56.101
+IP LOOPBACK   : 10.1.13.1/24
+
+VALIDACIONES
+─────────────────────────────────────────────
+  NETCONF  : ✔ CONFORME  → 5/5 criterios OK
+  RESTCONF : ✔ CONFORME  → 4/4 criterios OK
+  DIFF     : ✔ OK     → 4 archivos con diferencias
+
+RESULTADO GLOBAL
+─────────────────────────────────────────────
+  >>> COMPLIANCE: CONFORME <
+
+Equipo listo para operar en red corporativa.
+
+Firma: Pasten Poblete Bastian Jose | 001V-13
+═══════════════════════════════════════════════════════════════

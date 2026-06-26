@@ -1,0 +1,57 @@
+=== DIFF PLATFORM ===
+Baseline : ../fase1_baseline/evidencias/baseline_001V-13/platform_iosxe_CSR1kv_ops.txt
+Snapshot : evidencias/snapshot_final_001V-13/platform_iosxe_CSR1kv_ops.txt
+
+--- Lineas removidas (60) ---
+-           "in_progress": false
+-         "config_register": "0x2102",
+-         "issu": {
+-         "name": "CSR1000V",
+-         "redundancy_state": "ACTIVE",
+-         "rp_uptime": "2 hours, 24 minutes",
+-         "sn": "",
+-         "sn": "JAB1303001C",
+-         "state": "ok, active"
+-         "state": "ok, active",
+-         "system_image": "Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)"
+-         },
+-       "F0": {
+-       "R0": {
+-       }
+-     "chassis_sn",
+-     "date",
+-     "disk_free_space",
+-     "disk_total_space",
+-     "disk_used_space",
+-     "image",
+-     "index",
+-     "installed_packages",
+-     "main_mem",
+-     "oc": {
+-     "rp": {
+-     "rp_boot_image",
+-     "rp_uptime",
+-     "sn",
+-     "switchover_reason",
+-     "total_free_bytes",
+-     "uptime",
+-     "version"
+-     }
+-     },
+-   "_exclude": [
+-   "attributes": null,
+-   "chassis": "CSR1000V",
+-   "chassis_sn": "9GT1T3KE5FB",
+-   "commands": null,
+-   "config_register": "0x2102",
+-   "connections": null,
+-   "context_manager": {},
+-   "dir": "bootflash:/",
+-   "image": "bootflash:packages.conf",
+-   "issu_rollback_timer_reason": "no ISSU operation is in progress",
+-   "issu_rollback_timer_state": "inactive",
+-   "main_mem": "2182252",
+-   "os": "iosxe",
+-   "redundancy_communication": false,
+
++++ Lineas agregadas (0) ---

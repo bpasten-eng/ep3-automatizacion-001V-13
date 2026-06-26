@@ -1,0 +1,62 @@
+=== DIFF ROUTING ===
+Baseline : ../fase1_baseline/evidencias/baseline_001V-13/routing_iosxe_CSR1kv_ops.txt
+Snapshot : evidencias/snapshot_final_001V-13/routing_iosxe_CSR1kv_ops.txt
+
+--- Lineas removidas (29) ---
+-                       "outgoing_interface": "GigabitEthernet1"
+-                     "GigabitEthernet1": {
+-                     }
+-                   "outgoing_interface": {
+-                 "active": true,
+-                 "next_hop": {
+-                 "route": "192.168.56.0/24",
+-                 "route": "192.168.56.101/32",
+-                 "source_protocol": "connected",
+-                 "source_protocol": "local",
+-                 "source_protocol_codes": "C"
+-                 "source_protocol_codes": "L"
+-                 },
+-               "192.168.56.0/24": {
+-               "192.168.56.101/32": {
+-               },
+-             "routes": {
+-           "ipv4": {
+-         "address_family": {
+-       "default": {
+-     "updated"
+-     "vrf": {
+-   "_exclude": [
+-   "attributes": null,
+-   "commands": null,
+-   "connections": null,
+-   "context_manager": {},
+-   "info": {
+-   ],
+
++++ Lineas agregadas (26) ---
++                     "outgoing_interface": "GigabitEthernet1"
++                     "outgoing_interface": "Loopback10"
++                   "GigabitEthernet1": {
++                   "Loopback10": {
++                 "outgoing_interface": {
++                 }
++               "active": true,
++               "next_hop": {
++               "route": "10.1.13.0/24",
++               "route": "10.1.13.1/32",
++               "route": "192.168.56.0/24",
++               "route": "192.168.56.101/32",
++               "source_protocol": "connected",
++               "source_protocol": "local",
++               "source_protocol_codes": "C",
++               "source_protocol_codes": "L",
++             "10.1.13.0/24": {
++             "10.1.13.1/32": {
++             "192.168.56.0/24": {
++             "192.168.56.101/32": {
++             },
++           "routes": {
++         "ipv4": {
++       "address_family": {
++     "default": {
++   "vrf": {

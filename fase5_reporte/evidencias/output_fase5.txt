@@ -1,0 +1,1343 @@
+
+Learning '['interface', 'platform', 'routing']' on devices '['CSR1kv']'
+[1m[31m
+failed to connect to CSR1kv
+Failed while bringing device to "any" state[0m[39m
+
+[2026-06-26 06:28:09,826] +++ CSR1kv logfile /tmp/CSR1kv-cli-20260626T062809826.log +++
+[2026-06-26 06:28:09,827] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 06:28:10,059] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139768933729088 +++
+[2026-06-26 06:28:10,059] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:10,146] Learned hostname(s) : ['RTR-ALMAGEN'].
+[2026-06-26 06:28:10,147] +++ initializing handle +++
+[2026-06-26 06:28:10,149] +++ RTR-ALMAGEN: executing command 'term length 0' +++
+term length 0
+RTR-ALMAGEN#
+[2026-06-26 06:28:10,624] +++ RTR-ALMAGEN: executing command 'term width 0' +++
+term width 0
+RTR-ALMAGEN#
+[2026-06-26 06:28:10,815] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 21 minutes
+Uptime for this control processor is 3 hours, 28 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:11,095] +++ RTR-ALMAGEN: config +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+RTR-ALMAGEN(config)#no logging console
+RTR-ALMAGEN(config)#line console 0
+RTR-ALMAGEN(config-line)#exec-timeout 0
+RTR-ALMAGEN(config-line)#end
+RTR-ALMAGEN#
+[2026-06-26 06:28:13,988] +++ RTR-ALMAGEN: executing command 'show vrf' +++
+show vrf
+RTR-ALMAGEN#
+[2026-06-26 06:28:14,372] +++ RTR-ALMAGEN: executing command 'show interfaces' +++
+show interfaces
+GigabitEthernet1 is up, line protocol is up 
+  Hardware is CSR vNIC, address is 0800.2741.0353 (bia 0800.2741.0353)
+  Description: Enlace-WAN-Copiapo
+  Internet address is 192.168.56.101/24
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is Virtual
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     7212 packets input, 1004231 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     4977 packets output, 1205003 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     12 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Loopback10 is up, line protocol is up 
+  Hardware is Loopback
+  Internet address is 10.1.13.1/24
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+RTR-ALMAGEN#
+[2026-06-26 06:28:14,819] +++ RTR-ALMAGEN: executing command 'show interfaces accounting' +++
+show interfaces accounting
+GigabitEthernet1 Enlace-WAN-Copiapo
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other         67       3270         45       2700
+                      IP       7127     999702       4981    1149665
+                     ARP         43       1806         45       2700
+                    IPv6         60       7855          0          0
+Loopback10 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+No traffic sent or received on this interface.
+RTR-ALMAGEN#
+[2026-06-26 06:28:15,101] +++ RTR-ALMAGEN: executing command 'show ip interface' +++
+show ip interface
+GigabitEthernet1 is up, line protocol is up
+  Internet address is 192.168.56.101/24
+  Broadcast address is 255.255.255.255
+  Address determined by DHCP
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Loopback10 is up, line protocol is up
+  Internet address is 10.1.13.1/24
+  Broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1514 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+RTR-ALMAGEN#
+[2026-06-26 06:28:15,493] +++ RTR-ALMAGEN: executing command 'show ipv6 interface' +++
+show ipv6 interface
+RTR-ALMAGEN#
+[OK] interface capturado
+[2026-06-26 06:28:16,946] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 21 minutes
+Uptime for this control processor is 3 hours, 28 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:17,804] +++ RTR-ALMAGEN: executing command 'dir' +++
+dir
+Directory of bootflash:/
+
+   11  drwx            16384  Jun 25 2026 05:23:49 +00:00  lost+found
+349505  drwx             4096  Jun 26 2026 03:01:10 +00:00  .installer
+   12  -rw-        393319440  Jun 25 2026 05:28:06 +00:00  csr1000v-mono-universalk9.16.09.05.SPA.pkg
+   13  -rw-         40313093  Jun 25 2026 05:28:11 +00:00  csr1000v-rpboot.16.09.05.SPA.pkg
+   14  -rw-             1941  Jun 25 2026 05:28:11 +00:00  packages.conf
+430785  drwx             4096  Jun 25 2026 05:37:10 +00:00  core
+406401  drwx             4096  Jun 25 2026 05:36:55 +00:00  .prst_sync
+260097  drwx             4096  Jun 25 2026 05:37:11 +00:00  .rollback_timer
+463297  drwx             4096  Jun 25 2026 05:42:31 +00:00  .dbpersist
+414529  drwx            12288  Jun 26 2026 06:27:25 +00:00  tracelogs
+162561  drwx             4096  Jun 25 2026 05:38:42 +00:00  virtual-instance
+   15  -rw-               30  Jun 26 2026 03:07:55 +00:00  throughput_monitor_params
+   16  -rw-                0  Jun 26 2026 03:07:54 +00:00  cvac.log
+   17  -rw-                1  Jun 25 2026 05:41:59 +00:00  .cvac_version
+   18  -rw-               16  Jun 25 2026 05:41:59 +00:00  iosxe_config.txt.md5
+   19  -rw-              157  Jun 26 2026 03:09:53 +00:00  csrlxc-cfg.log
+365761  drwx             4096  Jun 25 2026 05:42:05 +00:00  onep
+   20  -rw-               35  Jun 25 2026 05:46:58 +00:00  pnp-tech-time
+   21  -rw-            59097  Jun 25 2026 05:47:02 +00:00  pnp-tech-discovery-summary
+
+7897796608 bytes total (7043919872 bytes free)
+RTR-ALMAGEN#
+[2026-06-26 06:28:18,459] +++ RTR-ALMAGEN: executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 3 hours, 21 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+
+                 Hardware Mode = Simplex
+    Configured Redundancy Mode = Non-redundant
+     Operating Redundancy Mode = Non-redundant
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 6
+        Current Software state = ACTIVE
+       Uptime in current state = 3 hours, 20 minutes
+                 Image Version = Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+        Configuration register = 0x2102
+
+Peer (slot: 7) information is not available because it is in 'DISABLED' state
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:18,741] +++ RTR-ALMAGEN: executing command 'show inventory' +++
+show inventory
+NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+PID: CSR1000V          , VID: V00  , SN: 9GT1T3KE5FB
+
+NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+PID: CSR1000V          , VID:      , SN:            
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:18,954] +++ RTR-ALMAGEN: executing command 'show issu rollback-timer' +++
+show issu rollback-timer
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Rollback: inactive, no ISSU operation is in progress
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:28,719] +++ RTR-ALMAGEN: executing command 'show platform' +++
+show platform
+Chassis type: CSR1000V            
+
+Slot      Type                State                 Insert time (ago) 
+--------- ------------------- --------------------- ----------------- 
+R0        CSR1000V            ok, active            03:27:15      
+F0        CSR1000V            ok, active            03:27:15      
+
+RTR-ALMAGEN#
+[2026-06-26 06:28:28,950] +++ RTR-ALMAGEN: executing command 'show issu state detail' +++
+show issu state detail
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+No ISSU operation is in progress
+
+RTR-ALMAGEN#
+[FAIL] platform: 'Platform' object has no attribute 'info'
+[2026-06-26 06:28:35,116] +++ RTR-ALMAGEN: executing command 'show ip route' +++
+show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.1.13.0/24 is directly connected, Loopback10
+L        10.1.13.1/32 is directly connected, Loopback10
+      192.168.56.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.56.0/24 is directly connected, GigabitEthernet1
+L        192.168.56.101/32 is directly connected, GigabitEthernet1
+RTR-ALMAGEN#
+[2026-06-26 06:28:35,350] +++ RTR-ALMAGEN: executing command 'show ipv6 route' +++
+show ipv6 route
+RTR-ALMAGEN#
+[OK] routing capturado
+Snapshot final completado.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+[1m[31m
+Expecting property name enclosed in double quotes: line 1 column 2 (char 1)[0m[39m
+
+[2026-06-26 06:31:18,656] +++ CSR1kv logfile /tmp/CSR1kv-cli-20260626T063118655.log +++
+[2026-06-26 06:31:18,657] +++ Unicon plugin iosxe +++
+
+[2026-06-26 06:31:18,976] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 140323556578112 +++
+[2026-06-26 06:31:18,976] connection to CSR1kv
+Password: 
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:19,041] Learned hostname(s) : ['RTR-ALMAGEN'].
+[2026-06-26 06:31:19,041] +++ initializing handle +++
+[2026-06-26 06:31:19,042] +++ RTR-ALMAGEN: executing command 'term length 0' +++
+term length 0
+RTR-ALMAGEN#
+[2026-06-26 06:31:19,270] +++ RTR-ALMAGEN: executing command 'term width 0' +++
+term width 0
+RTR-ALMAGEN#
+[2026-06-26 06:31:19,517] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 24 minutes
+Uptime for this control processor is 3 hours, 31 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:19,763] +++ RTR-ALMAGEN: config +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+RTR-ALMAGEN(config)#no logging console
+RTR-ALMAGEN(config)#line console 0
+RTR-ALMAGEN(config-line)#exec-timeout 0
+RTR-ALMAGEN(config-line)#end
+RTR-ALMAGEN#
+[2026-06-26 06:31:20,583] +++ RTR-ALMAGEN: executing command 'show vrf' +++
+show vrf
+RTR-ALMAGEN#
+[2026-06-26 06:31:21,018] +++ RTR-ALMAGEN: executing command 'show interfaces' +++
+show interfaces
+GigabitEthernet1 is up, line protocol is up 
+  Hardware is CSR vNIC, address is 0800.2741.0353 (bia 0800.2741.0353)
+  Description: Enlace-WAN-Copiapo
+  Internet address is 192.168.56.101/24
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is Virtual
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 1/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     7530 packets input, 1034554 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     5390 packets output, 1274092 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     13 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Loopback10 is up, line protocol is up 
+  Hardware is Loopback
+  Internet address is 10.1.13.1/24
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+RTR-ALMAGEN#
+[2026-06-26 06:31:21,338] +++ RTR-ALMAGEN: executing command 'show interfaces accounting' +++
+show interfaces accounting
+GigabitEthernet1 Enlace-WAN-Copiapo
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other         70       3434         46       2760
+                      IP       7500    1034149       5493    1227730
+                     ARP         44       1848         46       2760
+                    IPv6         60       7855          0          0
+Loopback10 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+No traffic sent or received on this interface.
+RTR-ALMAGEN#
+[2026-06-26 06:31:21,889] +++ RTR-ALMAGEN: executing command 'show ip interface' +++
+show ip interface
+GigabitEthernet1 is up, line protocol is up
+  Internet address is 192.168.56.101/24
+  Broadcast address is 255.255.255.255
+  Address determined by DHCP
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Loopback10 is up, line protocol is up
+  Internet address is 10.1.13.1/24
+  Broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1514 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+RTR-ALMAGEN#
+[2026-06-26 06:31:22,275] +++ RTR-ALMAGEN: executing command 'show ipv6 interface' +++
+show ipv6 interface
+RTR-ALMAGEN#
+[FAIL] interface: 'Interface' object has no attribute 'to_file'
+[2026-06-26 06:31:22,585] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 24 minutes
+Uptime for this control processor is 3 hours, 31 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:22,886] +++ RTR-ALMAGEN: executing command 'dir' +++
+dir
+Directory of bootflash:/
+
+   11  drwx            16384  Jun 25 2026 05:23:49 +00:00  lost+found
+349505  drwx             4096  Jun 26 2026 03:01:10 +00:00  .installer
+   12  -rw-        393319440  Jun 25 2026 05:28:06 +00:00  csr1000v-mono-universalk9.16.09.05.SPA.pkg
+   13  -rw-         40313093  Jun 25 2026 05:28:11 +00:00  csr1000v-rpboot.16.09.05.SPA.pkg
+   14  -rw-             1941  Jun 25 2026 05:28:11 +00:00  packages.conf
+430785  drwx             4096  Jun 25 2026 05:37:10 +00:00  core
+406401  drwx             4096  Jun 25 2026 05:36:55 +00:00  .prst_sync
+260097  drwx             4096  Jun 25 2026 05:37:11 +00:00  .rollback_timer
+463297  drwx             4096  Jun 25 2026 05:42:31 +00:00  .dbpersist
+414529  drwx            12288  Jun 26 2026 06:27:25 +00:00  tracelogs
+162561  drwx             4096  Jun 25 2026 05:38:42 +00:00  virtual-instance
+   15  -rw-               30  Jun 26 2026 03:07:55 +00:00  throughput_monitor_params
+   16  -rw-                0  Jun 26 2026 03:07:54 +00:00  cvac.log
+   17  -rw-                1  Jun 25 2026 05:41:59 +00:00  .cvac_version
+   18  -rw-               16  Jun 25 2026 05:41:59 +00:00  iosxe_config.txt.md5
+   19  -rw-              157  Jun 26 2026 03:09:53 +00:00  csrlxc-cfg.log
+365761  drwx             4096  Jun 25 2026 05:42:05 +00:00  onep
+   20  -rw-               35  Jun 25 2026 05:46:58 +00:00  pnp-tech-time
+   21  -rw-            59097  Jun 25 2026 05:47:02 +00:00  pnp-tech-discovery-summary
+
+7897796608 bytes total (7043919872 bytes free)
+RTR-ALMAGEN#
+[2026-06-26 06:31:23,097] +++ RTR-ALMAGEN: executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 3 hours, 24 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+
+                 Hardware Mode = Simplex
+    Configured Redundancy Mode = Non-redundant
+     Operating Redundancy Mode = Non-redundant
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 6
+        Current Software state = ACTIVE
+       Uptime in current state = 3 hours, 23 minutes
+                 Image Version = Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+        Configuration register = 0x2102
+
+Peer (slot: 7) information is not available because it is in 'DISABLED' state
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:23,336] +++ RTR-ALMAGEN: executing command 'show inventory' +++
+show inventory
+NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+PID: CSR1000V          , VID: V00  , SN: 9GT1T3KE5FB
+
+NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+PID: CSR1000V          , VID:      , SN:            
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:23,552] +++ RTR-ALMAGEN: executing command 'show issu rollback-timer' +++
+show issu rollback-timer
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Rollback: inactive, no ISSU operation is in progress
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:29,986] +++ RTR-ALMAGEN: executing command 'show platform' +++
+show platform
+Chassis type: CSR1000V            
+
+Slot      Type                State                 Insert time (ago) 
+--------- ------------------- --------------------- ----------------- 
+R0        CSR1000V            ok, active            03:30:16      
+F0        CSR1000V            ok, active            03:30:16      
+
+RTR-ALMAGEN#
+[2026-06-26 06:31:30,209] +++ RTR-ALMAGEN: executing command 'show issu state detail' +++
+show issu state detail
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+No ISSU operation is in progress
+
+RTR-ALMAGEN#
+[FAIL] platform: 'Platform' object has no attribute 'to_file'
+[2026-06-26 06:31:36,608] +++ RTR-ALMAGEN: executing command 'show ip route' +++
+show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.1.13.0/24 is directly connected, Loopback10
+L        10.1.13.1/32 is directly connected, Loopback10
+      192.168.56.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.56.0/24 is directly connected, GigabitEthernet1
+L        192.168.56.101/32 is directly connected, GigabitEthernet1
+RTR-ALMAGEN#
+[2026-06-26 06:31:36,814] +++ RTR-ALMAGEN: executing command 'show ipv6 route' +++
+show ipv6 route
+RTR-ALMAGEN#
+[FAIL] routing: 'Routing' object has no attribute 'to_file'
+Snapshot final completado.
+[2026-06-26 06:33:06,361] +++ CSR1kv logfile /tmp/CSR1kv-cli-20260626T063306360.log +++
+[2026-06-26 06:33:06,361] +++ Unicon plugin iosxe +++
+Password: 
+[2026-06-26 06:33:06,588] +++ connection to spawn: ssh -l cisco 192.168.56.101 -p 22, id: 139926261809984 +++
+[2026-06-26 06:33:06,588] connection to CSR1kv
+
+ ACCESO RESTRINGIDO - ALMAGEN 
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:06,680] Learned hostname(s) : ['RTR-ALMAGEN'].
+[2026-06-26 06:33:06,681] +++ initializing handle +++
+[2026-06-26 06:33:06,682] +++ RTR-ALMAGEN: executing command 'term length 0' +++
+term length 0
+RTR-ALMAGEN#
+[2026-06-26 06:33:06,870] +++ RTR-ALMAGEN: executing command 'term width 0' +++
+term width 0
+RTR-ALMAGEN#
+[2026-06-26 06:33:07,070] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 26 minutes
+Uptime for this control processor is 3 hours, 33 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:07,239] +++ RTR-ALMAGEN: config +++
+config term
+Enter configuration commands, one per line.  End with CNTL/Z.
+RTR-ALMAGEN(config)#no logging console
+RTR-ALMAGEN(config)#line console 0
+RTR-ALMAGEN(config-line)#exec-timeout 0
+RTR-ALMAGEN(config-line)#end
+RTR-ALMAGEN#
+[2026-06-26 06:33:07,848] +++ RTR-ALMAGEN: executing command 'show vrf' +++
+show vrf
+RTR-ALMAGEN#
+[2026-06-26 06:33:08,012] +++ RTR-ALMAGEN: executing command 'show interfaces' +++
+show interfaces
+GigabitEthernet1 is up, line protocol is up 
+  Hardware is CSR vNIC, address is 0800.2741.0353 (bia 0800.2741.0353)
+  Description: Enlace-WAN-Copiapo
+  Internet address is 192.168.56.101/24
+  MTU 1500 bytes, BW 1000000 Kbit/sec, DLY 10 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation ARPA, loopback not set
+  Keepalive set (10 sec)
+  Full Duplex, 1000Mbps, link type is auto, media type is Virtual
+  output flow-control is unsupported, input flow-control is unsupported
+  ARP type: ARPA, ARP Timeout 04:00:00
+  Last input 00:00:00, output 00:00:00, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 1/375/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/40 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     7811 packets input, 1059815 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored
+     0 watchdog, 0 multicast, 0 pause input
+     5803 packets output, 1342878 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     13 unknown protocol drops
+     0 babbles, 0 late collision, 0 deferred
+     0 lost carrier, 0 no carrier, 0 pause output
+     0 output buffer failures, 0 output buffers swapped out
+Loopback10 is up, line protocol is up 
+  Hardware is Loopback
+  Internet address is 10.1.13.1/24
+  MTU 1514 bytes, BW 8000000 Kbit/sec, DLY 5000 usec, 
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation LOOPBACK, loopback not set
+  Keepalive set (10 sec)
+  Last input never, output never, output hang never
+  Last clearing of "show interface" counters never
+  Input queue: 0/75/0/0 (size/max/drops/flushes); Total output drops: 0
+  Queueing strategy: fifo
+  Output queue: 0/0 (size/max)
+  5 minute input rate 0 bits/sec, 0 packets/sec
+  5 minute output rate 0 bits/sec, 0 packets/sec
+     0 packets input, 0 bytes, 0 no buffer
+     Received 0 broadcasts (0 IP multicasts)
+     0 runts, 0 giants, 0 throttles 
+     0 input errors, 0 CRC, 0 frame, 0 overrun, 0 ignored, 0 abort
+     0 packets output, 0 bytes, 0 underruns
+     0 output errors, 0 collisions, 0 interface resets
+     0 unknown protocol drops
+     0 output buffer failures, 0 output buffers swapped out
+RTR-ALMAGEN#
+[2026-06-26 06:33:08,270] +++ RTR-ALMAGEN: executing command 'show interfaces accounting' +++
+show interfaces accounting
+GigabitEthernet1 Enlace-WAN-Copiapo
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+                   Other         70       3434         46       2760
+                      IP       7688    1049908       5757    1270482
+                     ARP         44       1848         46       2760
+                    IPv6         60       7855          0          0
+Loopback10 
+                Protocol    Pkts In   Chars In   Pkts Out  Chars Out
+No traffic sent or received on this interface.
+RTR-ALMAGEN#
+[2026-06-26 06:33:08,529] +++ RTR-ALMAGEN: executing command 'show ip interface' +++
+show ip interface
+GigabitEthernet1 is up, line protocol is up
+  Internet address is 192.168.56.101/24
+  Broadcast address is 255.255.255.255
+  Address determined by DHCP
+  MTU is 1500 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+Loopback10 is up, line protocol is up
+  Internet address is 10.1.13.1/24
+  Broadcast address is 255.255.255.255
+  Address determined by setup command
+  MTU is 1514 bytes
+  Helper address is not set
+  Directed broadcast forwarding is disabled
+  Outgoing Common access list is not set 
+  Outgoing access list is not set
+  Inbound Common access list is not set 
+  Inbound  access list is not set
+  Proxy ARP is enabled
+  Local Proxy ARP is disabled
+  Security level is default
+  Split horizon is enabled
+  ICMP redirects are always sent
+  ICMP unreachables are always sent
+  ICMP mask replies are never sent
+  IP fast switching is enabled
+  IP Flow switching is disabled
+  IP CEF switching is enabled
+  IP CEF switching turbo vector
+  IP Null turbo vector
+  Associated unicast routing topologies:
+        Topology "base", operation state is UP
+  IP multicast fast switching is enabled
+  IP multicast distributed fast switching is disabled
+  IP route-cache flags are Fast, CEF
+  Router Discovery is disabled
+  IP output packet accounting is disabled
+  IP access violation accounting is disabled
+  TCP/IP header compression is disabled
+  RTP/IP header compression is disabled
+  Probe proxy name replies are disabled
+  Policy routing is disabled
+  Network address translation is disabled
+  BGP Policy Mapping is disabled
+  Input features: MCI Check
+  IPv4 WCCP Redirect outbound is disabled
+  IPv4 WCCP Redirect inbound is disabled
+  IPv4 WCCP Redirect exclude is disabled
+RTR-ALMAGEN#
+[2026-06-26 06:33:08,759] +++ RTR-ALMAGEN: executing command 'show ipv6 interface' +++
+show ipv6 interface
+RTR-ALMAGEN#
+[OK] interface capturado
+[2026-06-26 06:33:08,998] +++ RTR-ALMAGEN: executing command 'show version' +++
+show version
+Cisco IOS XE Software, Version 16.09.05
+Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+
+
+Cisco IOS-XE software, Copyright (c) 2005-2020 by cisco Systems, Inc.
+All rights reserved.  Certain components of Cisco IOS-XE software are
+licensed under the GNU General Public License ("GPL") Version 2.0.  The
+software code licensed under GPL Version 2.0 is free software that comes
+with ABSOLUTELY NO WARRANTY.  You can redistribute and/or modify such
+GPL code under the terms of GPL Version 2.0.  For more details, see the
+documentation or "License Notice" file accompanying the IOS-XE software,
+or the applicable URL provided on the flyer accompanying the IOS-XE
+software.
+
+
+ROM: IOS-XE ROMMON
+
+RTR-ALMAGEN uptime is 3 hours, 26 minutes
+Uptime for this control processor is 3 hours, 33 minutes
+System returned to ROM by reload
+System image file is "bootflash:packages.conf"
+Last reload reason: reload
+
+
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+
+License Level: ax
+License Type: Default. No valid license found.
+Next reload license Level: ax
+
+
+Smart Licensing Status: Smart Licensing is DISABLED
+
+cisco CSR1000V (VXE) processor (revision VXE) with 2182252K/3075K bytes of memory.
+Processor board ID 9GT1T3KE5FB
+1 Gigabit Ethernet interface
+32768K bytes of non-volatile configuration memory.
+3985032K bytes of physical memory.
+7774207K bytes of virtual hard disk at bootflash:.
+0K bytes of WebUI ODM Files at webui:.
+
+Configuration register is 0x2102
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:09,226] +++ RTR-ALMAGEN: executing command 'dir' +++
+dir
+Directory of bootflash:/
+
+   11  drwx            16384  Jun 25 2026 05:23:49 +00:00  lost+found
+349505  drwx             4096  Jun 26 2026 03:01:10 +00:00  .installer
+   12  -rw-        393319440  Jun 25 2026 05:28:06 +00:00  csr1000v-mono-universalk9.16.09.05.SPA.pkg
+   13  -rw-         40313093  Jun 25 2026 05:28:11 +00:00  csr1000v-rpboot.16.09.05.SPA.pkg
+   14  -rw-             1941  Jun 25 2026 05:28:11 +00:00  packages.conf
+430785  drwx             4096  Jun 25 2026 05:37:10 +00:00  core
+406401  drwx             4096  Jun 25 2026 05:36:55 +00:00  .prst_sync
+260097  drwx             4096  Jun 25 2026 05:37:11 +00:00  .rollback_timer
+463297  drwx             4096  Jun 25 2026 05:42:31 +00:00  .dbpersist
+414529  drwx            12288  Jun 26 2026 06:32:25 +00:00  tracelogs
+162561  drwx             4096  Jun 25 2026 05:38:42 +00:00  virtual-instance
+   15  -rw-               30  Jun 26 2026 03:07:55 +00:00  throughput_monitor_params
+   16  -rw-                0  Jun 26 2026 03:07:54 +00:00  cvac.log
+   17  -rw-                1  Jun 25 2026 05:41:59 +00:00  .cvac_version
+   18  -rw-               16  Jun 25 2026 05:41:59 +00:00  iosxe_config.txt.md5
+   19  -rw-              157  Jun 26 2026 03:09:53 +00:00  csrlxc-cfg.log
+365761  drwx             4096  Jun 25 2026 05:42:05 +00:00  onep
+   20  -rw-               35  Jun 25 2026 05:46:58 +00:00  pnp-tech-time
+   21  -rw-            59097  Jun 25 2026 05:47:02 +00:00  pnp-tech-discovery-summary
+
+7897796608 bytes total (7043903488 bytes free)
+RTR-ALMAGEN#
+[2026-06-26 06:33:09,408] +++ RTR-ALMAGEN: executing command 'show redundancy' +++
+show redundancy
+Redundant System Information :
+------------------------------
+       Available system uptime = 3 hours, 26 minutes
+Switchovers system experienced = 0
+              Standby failures = 0
+        Last switchover reason = none
+
+                 Hardware Mode = Simplex
+    Configured Redundancy Mode = Non-redundant
+     Operating Redundancy Mode = Non-redundant
+              Maintenance Mode = Disabled
+                Communications = Down      Reason: Failure
+
+Current Processor Information :
+-------------------------------
+               Active Location = slot 6
+        Current Software state = ACTIVE
+       Uptime in current state = 3 hours, 25 minutes
+                 Image Version = Cisco IOS Software [Fuji], Virtual XE Software (X86_64_LINUX_IOSD-UNIVERSALK9-M), Version 16.9.5, RELEASE SOFTWARE (fc1)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2020 by Cisco Systems, Inc.
+Compiled Thu 30-Jan-20 18:48 by mcpre
+        Configuration register = 0x2102
+
+Peer (slot: 7) information is not available because it is in 'DISABLED' state
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:09,602] +++ RTR-ALMAGEN: executing command 'show inventory' +++
+show inventory
+NAME: "Chassis", DESCR: "Cisco CSR1000V Chassis"
+PID: CSR1000V          , VID: V00  , SN: 9GT1T3KE5FB
+
+NAME: "module R0", DESCR: "Cisco CSR1000V Route Processor"
+PID: CSR1000V          , VID: V00  , SN: JAB1303001C
+
+NAME: "module F0", DESCR: "Cisco CSR1000V Embedded Services Processor"
+PID: CSR1000V          , VID:      , SN:            
+
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:09,790] +++ RTR-ALMAGEN: executing command 'show issu rollback-timer' +++
+show issu rollback-timer
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+Rollback: inactive, no ISSU operation is in progress
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:15,470] +++ RTR-ALMAGEN: executing command 'show platform' +++
+show platform
+Chassis type: CSR1000V            
+
+Slot      Type                State                 Insert time (ago) 
+--------- ------------------- --------------------- ----------------- 
+R0        CSR1000V            ok, active            03:32:02      
+F0        CSR1000V            ok, active            03:32:02      
+
+RTR-ALMAGEN#
+[2026-06-26 06:33:15,652] +++ RTR-ALMAGEN: executing command 'show issu state detail' +++
+show issu state detail
+--- Starting local lock acquisition on R0 ---
+Finished local lock acquisition on R0
+
+No ISSU operation is in progress
+
+RTR-ALMAGEN#
+[FAIL] platform: 'Platform' object has no attribute 'info'
+[2026-06-26 06:33:21,137] +++ RTR-ALMAGEN: executing command 'show ip route' +++
+show ip route
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area 
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2
+       i - IS-IS, su - IS-IS summary, L1 - IS-IS level-1, L2 - IS-IS level-2
+       ia - IS-IS inter area, * - candidate default, U - per-user static route
+       o - ODR, P - periodic downloaded static route, H - NHRP, l - LISP
+       a - application route
+       + - replicated route, % - next hop override, p - overrides from PfR
+
+Gateway of last resort is not set
+
+      10.0.0.0/8 is variably subnetted, 2 subnets, 2 masks
+C        10.1.13.0/24 is directly connected, Loopback10
+L        10.1.13.1/32 is directly connected, Loopback10
+      192.168.56.0/24 is variably subnetted, 2 subnets, 2 masks
+C        192.168.56.0/24 is directly connected, GigabitEthernet1
+L        192.168.56.101/32 is directly connected, GigabitEthernet1
+RTR-ALMAGEN#
+[2026-06-26 06:33:21,342] +++ RTR-ALMAGEN: executing command 'show ipv6 route' +++
+show ipv6 route
+RTR-ALMAGEN#
+[OK] routing capturado
+Snapshot final completado.
+0it [00:00, ?it/s]0it [00:00, ?it/s]
+[1m[31m
+Expecting value: line 1 column 1 (char 0)[0m[39m
+
+[OK] diff interface: 102 removidas, 79 agregadas
+[OK] diff platform: 60 removidas, 0 agregadas
+[OK] diff routing: 29 removidas, 26 agregadas
+Diff completado.
+
+╔══════════════════════════════════════════════════════════════╗
+║        CERTIFICADO DE COMPLIANCE DE RED — EP3               ║
+║        DRY7122 Programacion y Redes Virtualizadas            ║
+╚══════════════════════════════════════════════════════════════╝
+
+ALUMNO        : Pasten Poblete Bastian Jose
+CODIGO        : 001V-13
+FECHA         : 2026-06-26 06:43:48
+VM            : labvm
+
+CLIENTE       : Almacenes Generales SA
+HOSTNAME      : RTR-ALMAGEN
+IP ROUTER     : 192.168.56.101
+IP LOOPBACK   : 10.1.13.1/24
+
+VALIDACIONES
+─────────────────────────────────────────────
+  NETCONF  : ✔ CONFORME  → 5/5 criterios OK
+  RESTCONF : ✔ CONFORME  → 4/4 criterios OK
+  DIFF     : ✔ OK     → 4 archivos con diferencias
+
+RESULTADO GLOBAL
+─────────────────────────────────────────────
+  >>> COMPLIANCE: CONFORME <
+
+Equipo listo para operar en red corporativa.
+
+Firma: Pasten Poblete Bastian Jose | 001V-13
+═══════════════════════════════════════════════════════════════
+
+Certificado guardado.
