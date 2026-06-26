@@ -1,0 +1,31 @@
+<rpc-reply xmlns="urn:ietf:params:xml:ns:netconf:base:1.0" xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0" message-id="urn:uuid:93c4f3f8-91c2-4cc2-8cc4-900d3f36ae1c">
+  <data>
+    <native xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-native">
+      <hostname>RTR-ALMAGEN</hostname>
+      <interface>
+        <GigabitEthernet>
+          <name xmlns:nc="urn:ietf:params:xml:ns:netconf:base:1.0">1</name>
+          <description>Enlace-WAN-Copiapo</description>
+        </GigabitEthernet>
+        <Loopback>
+          <name>10</name>
+          <ip>
+            <address>
+              <primary>
+                <address>10.1.13.1</address>
+                <mask>255.255.255.0</mask>
+              </primary>
+            </address>
+          </ip>
+        </Loopback>
+      </interface>
+      <ntp>
+        <server xmlns="http://cisco.com/ns/yang/Cisco-IOS-XE-ntp">
+          <server-list>
+            <ip-address>1.1.1.1</ip-address>
+          </server-list>
+        </server>
+      </ntp>
+    </native>
+  </data>
+</rpc-reply>

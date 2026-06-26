@@ -1,0 +1,40 @@
+============================================================
+Script  : validacion_netconf.py
+Alumno  : 001V-13 - Pasten Poblete Bastian Jose
+Fecha   : 2026-06-26 05:28:29
+VM Host : labvm
+============================================================
+
+Conectando a 192.168.56.101:830 via NETCONF...
+Sesion ID: 23
+
+XML guardado en evidencias/rpc_reply_raw.xml
+
+============================================================
+REPORTE DE VALIDACION NETCONF
+============================================================
+  [OK]   Hostname corporativo
+         Esperado : RTR-ALMAGEN
+         Actual   : RTR-ALMAGEN
+
+  [OK]   IP Loopback10
+         Esperado : 10.1.13.1
+         Actual   : 10.1.13.1
+
+  [OK]   Mascara Loopback10
+         Esperado : 255.255.255.0
+         Actual   : 255.255.255.0
+
+  [OK]   Descripcion WAN
+         Esperado : Enlace-WAN-Copiapo
+         Actual   : Enlace-WAN-Copiapo
+
+  [OK]   Servidor NTP
+         Esperado : 1.1.1.1
+         Actual   : 1.1.1.1
+
+------------------------------------------------------------
+Resultado: 5/5 criterios conformes
+
+>>> ESTADO NETCONF: CONFORME <<<
+============================================================
